@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --primary: #482A89;
+  --primary1: #5D36AF;
+  --secondary:#A27443;
+  --primary-hover: #3a216d;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary1: var(--primary1);
+  --color-secondary: var(--secondary);
+  --color-primary-hover: #3a216d;
+  --font-sans: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary-hover);
+}
+
+/* Dual Range Slider Styles */
+.slider-input {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.slider-input::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border: 3px solid var(--primary);
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  z-index: 20;
+}
+
+.slider-input::-webkit-slider-thumb:hover {
+  border-color: var(--primary1);
+}
+
+.slider-input::-moz-range-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border: 3px solid var(--primary);
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  z-index: 20;
+}
+
+.slider-input::-moz-range-thumb:hover {
+  border-color: var(--primary1);
+}
+
+.slider-input::-webkit-slider-runnable-track {
+  background: transparent;
+  height: 2px;
+}
+
+.slider-input::-moz-range-track {
+  background: transparent;
+  height: 2px;
+}
